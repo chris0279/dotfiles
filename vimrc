@@ -1,7 +1,8 @@
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 syntax on
-"color solarized
+color solarized
+set bg=dark
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
