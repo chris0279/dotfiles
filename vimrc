@@ -1,5 +1,8 @@
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
+" TODO: better structure, e.g. separate files for shortcuts, loading rules on file type 
+" TODO: indent: eval cindent -> cinwords
+" TODO: autofolding
+"
+" enables syntax highlighting
 syntax on
 color solarized
 set bg=dark
@@ -12,6 +15,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
 filetype plugin indent on
+set smartindent
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -137,12 +141,13 @@ if &diff
 endif
 
 " headline maps
-map h1 :s/\(.*\)/= \1 =/<cr>yykpVr=yyjpo
-map h2 yypVr=o
-map h3 yypVr-o
+map h1 :s/\(.*\)/= \1 =/<cr>yykpVr=yyjp
+map h2 yypVr=
+map h3 yypVr-
 
 " shortcuts 
 "source ~/.abbreviations.vim
+" puppet shortcuts
 inoremap <c-j> <ESC>/+.\{-1,}+<cr>c/+/e<cr>
 match Error /+.\++/
 iabbr class class +NAME+ {
