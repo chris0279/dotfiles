@@ -1,6 +1,7 @@
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 syntax on
+"color solarized
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -133,6 +134,11 @@ if &diff
 	map <c-p> <esc>:diffput<cr>
 	map <c-g> <esc>:diffget<cr> 
 endif
+
+" headline maps
+map h1 :s/\(.*\)/= \1 =/<cr>yykpVr=yyjpo
+map h2 yypVr=o
+map h3 yypVr-o
 
 " shortcuts 
 "source ~/.abbreviations.vim
