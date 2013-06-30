@@ -1,4 +1,4 @@
-" TODO: better structure, e.g. separate files for shortcuts, loading rules on file type 
+" TODO: better structure, e.g. separate files for shortcuts, loading rules on file type (source file for tests, system specific source file)
 " TODO: indent: eval cindent -> cinwords
 " TODO: autofolding
 "
@@ -40,8 +40,9 @@ set shiftwidth=2
 set softtabstop=2
 "set expandtab
 
-"set spell
-"set spelllang=de,en
+" ftp://ftp.vim.org/pub/vim/runtime/spell
+set spell
+set spelllang=de,en
 
 " folding
 set foldenable
